@@ -42,31 +42,34 @@ function ConverterEuroToDollars() {
   </div>;
 }
 
-var ConvertBase = function (num) {
-  return {
-    from : function (baseFrom) {
-      return {
-        to : function (baseTo) {
-          return parseInt(num, baseFrom).toString(baseTo);
-        }
-      };
-    }
-  }
-}
-
   function DecimalToBinaire() {
-    const [decimal, setDecimal] = useState('');
+
+    const [decimal, setDecimal] = useState('0');
+    const [binary, setBinary] = useState('0');
 
     function DecimalChange(e) {
       setDecimal(e.target.value);
     }
+    function BinaryChange(e) {
+      setBinary(e.target.value);
+    }
     function convertDecimal(decimal) {
-      return ConvertBase(decimal).from(10).to(2);
+      return parseInt(decimal).toString(2);
+    }
+    function convertBinary(binary) {
+      return parseInt(binary, 2);
     }
 
     return <div className="text-center">
+    <div class="card-body">
+    <h2 class="card-title mt-2"><span class="badge badge-danger text-dark">Decimal to Binary</span></h2>
     <input type="text" class="form-control" value={decimal} onChange={DecimalChange} placeholder="123" />
     <h3>=<h2 className="text-danger">{convertDecimal(decimal)}</h2></h3>
+    <hr/>
+    <h2 class="card-title mt-2"><span class="badge badge-danger text-dark">Binary to Decimal</span></h2>
+    <input type="integer" class="form-control" value={binary} onChange={BinaryChange} placeholder="123" />
+    <h3>=<h2 className="text-danger">{convertBinary(binary)}</h2></h3>
+    </div>
     </div>;
   }
 
@@ -92,7 +95,7 @@ var ConvertBase = function (num) {
       <Container>
       <CardDeck>
 
-      <Card>
+      <Card className="shadow">
       <Card.Body>
       <Card.Title className="text-center border-bottom text-danger">KM to Miles </Card.Title>
       <Card.Text className="mt-4">
@@ -101,7 +104,7 @@ var ConvertBase = function (num) {
       </Card.Body>
       </Card>
 
-      <Card>
+      <Card className="shadow">
       <Card.Body>
       <Card.Title className="text-center border-bottom text-danger">€ to $</Card.Title>
       <Card.Text className="mt-4">
@@ -110,13 +113,8 @@ var ConvertBase = function (num) {
       </Card.Body>
       </Card>
 
-      <Card>
-      <Card.Body>
-      <Card.Title className="text-center border-bottom text-danger">Décimal to Binary</Card.Title>
-      <Card.Text className="mt-4">
+      <Card className="shadow">
       <DecimalToBinaire />
-      </Card.Text>
-      </Card.Body>
       </Card>
 
       </CardDeck>
