@@ -21,7 +21,7 @@ function Converter() {
   }
 
   return <div className="text-center">
-  <input type="text" value={km} onChange={handleChange} placeholder="KM" />
+  <input type="text" class="form-control" value={km} onChange={handleChange} placeholder="KM" />
   <p> {km} km is {convert(km)} miles </p>
   </div>;
 }
@@ -37,7 +37,7 @@ function ConverterEuroToDollars() {
   }
 
   return <div className="text-center">
-  <input type="text" value={euro} onChange={EuroChange} placeholder="€" />
+  <input type="text" class="form-control" value={euro} onChange={EuroChange} placeholder="€" />
   <p> {euro} Euro = {convertEuro(euro)} Dollars </p>
   </div>;
 }
@@ -65,7 +65,7 @@ var ConvertBase = function (num) {
     }
 
     return <div className="text-center">
-    <input type="text" value={decimal} onChange={DecimalChange} placeholder="123" />
+    <input type="text" class="form-control" value={decimal} onChange={DecimalChange} placeholder="123" />
     <h3>=<h2 className="text-danger">{convertDecimal(decimal)}</h2></h3>
     </div>;
   }
