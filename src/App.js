@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import CardDeck from 'react-bootstrap/CardDeck';
@@ -43,7 +42,6 @@ function ConverterEuroToDollars() {
 }
 
   function DecimalToBinaire() {
-
     const [decimal, setDecimal] = useState('0');
     const [binary, setBinary] = useState('0');
 
@@ -93,7 +91,7 @@ function ConverterEuroToDollars() {
       </Jumbotron>
 
       <Container>
-      <CardDeck>
+      <CardDeck className="row row-cols-1 row-cols-md-3 row-cols-md-2">
 
       <Card className="shadow">
       <Card.Body>
@@ -116,6 +114,7 @@ function ConverterEuroToDollars() {
       <Card className="shadow">
       <DecimalToBinaire />
       </Card>
+
 
       </CardDeck>
       </Container>
