@@ -17,12 +17,12 @@ function Converter() {
     setKm(e.target.value);
   }
   function convert(km) {
-    return (km/1.609).toFixed(2);
+    return (km/1.609).toFixed(1);
   }
 
   return <div className="text-center">
   <input type="text" class="form-control" value={km} onChange={handleChange} placeholder="KM" />
-  <p> {km} km is {convert(km)} miles </p>
+  <h3>=<h2 className="text-danger"> {convert(km)} miles </h2></h3>
   </div>;
 }
 
@@ -33,12 +33,12 @@ function ConverterEuroToDollars() {
     setEuro(e.target.value);
   }
   function convertEuro(euro) {
-    return (euro/0.82).toFixed(2);
+    return (euro/0.82).toFixed(0);
   }
 
   return <div className="text-center">
   <input type="text" class="form-control" value={euro} onChange={EuroChange} placeholder="€" />
-  <p> {euro} Euro = {convertEuro(euro)} Dollars </p>
+  <h3>=<h2 className="text-danger"> {convertEuro(euro)} $ </h2></h3>
   </div>;
 }
 
