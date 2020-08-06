@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import { Navbar, Nav, Jumbotron, Container, CardDeck, Card } from 'react-bootstrap';
 

@@ -16,7 +16,7 @@ const ConverterEuroToDollars = (props) => {
   <div className="card-body">
   <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">€ to $</span></h2>
   <input type="text" className="form-control" value={euro} onChange={EuroChange} placeholder="€" />
-  <h3>=<h2 className="text-danger"> {convertEuro(euro)} $ </h2></h3>
+  <h2 className="text-danger mt-3">= {convertEuro(euro)} $ </h2>
   </div>
   </div>
 )}
