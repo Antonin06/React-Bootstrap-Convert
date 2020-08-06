@@ -26,15 +26,15 @@ const DecimalToBinaire = () => {
 
   return (
   <div className="text-center">
-  <div className="card-body">
-  <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">Decimal to Binary</span></h2>
-  <input type="text" className="form-control" value={decimal} onChange={DecimalChange} placeholder="0" />
-  <h2 className="text-danger mt-3">= {convertDecimal(decimal)}</h2>
-  <hr/>
-  <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">Binary to Decimal</span></h2>
-  <input type="integer" className="form-control" value={binary} onChange={BinaryChange} placeholder="0" />
-  <h2 className="text-danger mt-3">= {convertBinary(binary)}</h2>
-  </div>
+    <div className="card-body">
+      <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">Decimal to Binary</span></h2>
+      <input type="text" className="form-control" value={decimal} onChange={DecimalChange} placeholder="0" />
+        <h2 className="text-danger mt-3">= {convertDecimal(decimal)}</h2>
+        <hr/>
+        <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">Binary to Decimal</span></h2>
+      <input type="integer" className="form-control" value={binary} onChange={BinaryChange} placeholder="0" />
+      <h2 className="text-danger mt-3">= {convertBinary(binary)}</h2>
+    </div>
   </div>
 )}
 

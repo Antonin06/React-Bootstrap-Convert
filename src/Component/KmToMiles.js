@@ -13,11 +13,11 @@ const Converter = (props) => {
 
   return (
     <div className="text-center">
-    <div className="card-body">
-    <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">KM To Miles</span></h2>
-    <input type="text" className="form-control" value={km} onChange={handleChange} placeholder="KM" />
-    <h2 className="text-danger mt-3">= {convert(km)} miles </h2>
-    </div>
+      <div className="card-body">
+        <h2 className="card-title mt-2"><span className="badge badge-danger text-dark">KM To Miles</span></h2>
+        <input type="text" className="form-control" value={km} onChange={handleChange} placeholder="KM" />
+        <h2 className="text-danger mt-3">= {convert(km)} miles </h2>
+      </div>
     </div>
   )}
 
